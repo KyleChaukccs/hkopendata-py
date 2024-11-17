@@ -17,10 +17,6 @@ RUN pyenv install 3.8 3.9 3.10 3.11 3.12 3.13
 RUN echo "pyenv global 3.8 3.9 3.10 3.11 3.12 3.13" >> ~/.bashrc
 
 WORKDIR $HOME/hkopendata-py
-COPY . .
-RUN python -m pip install poetry pre-commit && \
-    python -m poetry export -f requirements.txt \
-        -o requirements-dev.txt --with dev --without-hashes && \
-    python -m pip install -r requirements-dev.txt
+
 
 
