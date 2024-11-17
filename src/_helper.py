@@ -1,18 +1,16 @@
 from abc import ABC, abstractmethod
-from typing import TYPE_CHECKING, Iterator, List
+from typing import Iterator, List
 import csv
-
-if TYPE_CHECKING:
-    import pandas as pd
-    from pathlib import Path
+import pandas as pd
+from pathlib import Path
 
 class ToPD(ABC):
     @abstractmethod
-    def to_pd(self) -> "pd.DataFrame": ...
+    def to_pd(self) -> pd.DataFrame: ...
 
 class ToFile(ABC):
     @abstractmethod
-    def to_file(self, path: "Path") -> None: ...
+    def to_file(self, path: Path) -> None: ...
 
 
 class DataConverter(ToPD, ToFile):

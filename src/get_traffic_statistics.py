@@ -4,7 +4,7 @@ import requests
 from typing_extensions import overload, TypeAlias, assert_never
 from datetime import date, datetime
 import pandas as pd
-from ._helper import DataConverter
+from _helper import DataConverter
 
 DAILY_PASSENGERS_TRAFFIC_URL = "https://www.immd.gov.hk/opendata/{locale}/transport/immigration_clearance/statistics_on_daily_passenger_traffic.csv"
 
