@@ -1,0 +1,11 @@
+services:
+  python:
+    build:
+      context: .
+      dockerfile: dockerfile.dev
+    image: hkopendatapy-dev
+    container_name: hkopendatapy-dev
+    command:
+      - sleep infinity
+    volumes:
+      - .:/home/dev/hkopendata-py
