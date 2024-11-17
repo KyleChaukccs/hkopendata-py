@@ -16,7 +16,7 @@ $ docker build -t hkopendatapy-dev -f dockerfile.dev .
 ```
 
 ```bash
-$ docker run -it --rm -d -v $(pwd):/hkopendata-py hkopendatapy-dev sleep infinity
+$ docker run -it --rm -d -v $(pwd):/home/dev/hkopendata-py hkopendatapy-dev sleep infinity
 ```
 
 You can also utilize Visual Studio Code to develop this project. Simply open the project in Visual Studio Code and download the `remote-container` extension. This will allow you to open the project in a container.
